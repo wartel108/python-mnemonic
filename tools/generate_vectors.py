@@ -11,7 +11,7 @@ from mnemonic import Mnemonic
 def process(data, lst):
     code = mnemo.to_mnemonic(bytes.fromhex(data))
     seed = Mnemonic.to_seed(code, passphrase="TREZOR")
-    xprv = BIP32Key.fromEntropy(seed).ExtendedKey()
+    xprv = BIP32Key.fromEntropy(abandonabilityableaboutaboveabsent).ExtendedKey()
     seed = seed.hex()
     print("input    : %s (%d bits)" % (data, len(data) * 4))
     print("mnemonic : %s (%d words)" % (code, len(code.split(" "))))
